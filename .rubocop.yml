@@ -71,7 +71,7 @@ Layout/SpaceBeforeFirstArg:
 
 # Defining a method with parameters needs parentheses.
 Style/MethodDefParentheses:
-  Enabled: true
+  Enabled: false
 
 # Use `foo {}` not `foo{}`.
 Layout/SpaceBeforeBlockBraces:
