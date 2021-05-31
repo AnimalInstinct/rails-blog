@@ -7,7 +7,7 @@
 
 ## Features
 
-App has sqlite for the development environment and postgresql for the production.
+- App has sqlite for the development environment and postgresql for the production.
 
 ## Dependencies
 
