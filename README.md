@@ -1,9 +1,5 @@
 # README
 
-## Production
-
-
-
 ## Versions
 
 - ruby 3.0.0
