@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
     if @article.save
       flash[:success] = "Object successfully created"
       # render plain: @article.inspect
+      # redirect_to article_path(@article)
       redirect_to @article
     else
       flash[:error] = "Something went wrong"
