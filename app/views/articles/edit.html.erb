@@ -14,6 +14,10 @@
   </p>
 <% end %>
 
+<p>
+  <%= link_to 'Back to list', articles_path %>
+</p>
+
 <% if @article.errors.any? %>
   <h2>The following errors preventing the article from being saved:</h2>
   <ul>
