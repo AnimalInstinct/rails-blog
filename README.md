@@ -1,5 +1,9 @@
 # README
 
+## Production
+
+[Production link](https://bmdonego.herokuapp.com/)
+
 ## Versions
 
 - ruby 3.0.0
@@ -7,20 +11,5 @@
 
 ## Features
 
-- App has sqlite for the development environment and postgresql for the production.
-
-## Dependencies
-
-## Configuration
-
-## Database creation
-
-## Database initialization
-
-## How to run the test suite
-
-## Services (job queues, cache servers, search engines, etc.)
-
-## Deployment instructions
-
-...
+- Deployed at Heroku
+- Sqlite for the development environment and Postgresql for the production.
