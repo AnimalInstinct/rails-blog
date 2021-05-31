@@ -2,7 +2,7 @@
 
 ## Production
 
-[Production link](https://bmdonego.herokuapp.com/)
+
 
 ## Versions
 
@@ -11,5 +11,9 @@
 
 ## Features
 
-- Deployed at Heroku
+- [Deployed at Heroku](https://bmdonego.herokuapp.com/)
 - Sqlite for the development environment and Postgresql for the production.
+
+## Links
+
+- [WakaTime project report](https://wakatime.com/projects/blog)
