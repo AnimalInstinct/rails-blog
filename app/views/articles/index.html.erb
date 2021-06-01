@@ -1,15 +1,17 @@
-<h1>Articles list</h1>
+<h1 class="lead">Articles list</h1>
 
 <p>
-  <%= link_to 'Home', root_path %>
-  <%= link_to 'Create new article', new_article_path %>
+  <%= link_to 'Home', root_path, class: "btn btn-primary" %>
+  <%= link_to 'Create new article', new_article_path, class: "btn btn-primary" %>
 </p>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
       <th>Description</th>
+      <th>Created</th>
+      <th>Updated</th>
       <th colspan='3'>Actions</th>
     </tr>
   </thead>
@@ -18,9 +20,11 @@
       <tr>
         <td><%= article.title %></td>
         <td><%= article.description %></td>
-        <td><%= link_to 'Show', article_path(article) %></td>
-        <td><%= link_to 'Edit', edit_article_path(article), method: :get %></td>
-        <td><%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: "Are you sure?" }%></td> 
+        <td><%= time_ago_in_words(article.created_at) %> ago</td>
+        <td><%= time_ago_in_words(article.updated_at) %> ago</td>
+        <td><%= link_to 'Show', article_path(article), class: "btn btn-success" %></td>
+        <td><%= link_to 'Edit', edit_article_path(article), method: :get, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"%></td> 
       </tr>
     <% end %>
   </tbody>
