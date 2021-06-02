@@ -3,7 +3,7 @@
     <h1 class="text-center">Article details</h1>
   </div>
   <div class="card-body p-5">
-  <p><strong>Author: </strong><%= @article.user.username %></p>
+  <p><strong>Author: </strong><%= @article.user.username ? @article.user.username : 'No author'  %></p>
   <p><strong>Title: </strong><%= @article.title %></p>
   <p><strong>Description: </strong><%= @article.description %></p>
 
