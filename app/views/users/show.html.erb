@@ -1,1 +1,12 @@
-<h1>Hello <%= @user.username %></h1>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h1 class="text-center">Hello <%= @user.username %> !!1111</h1>
+    </div>
+    <div class="card-body p-5">
+      <%= gravatar_for @user, size: 200 %>
+      <h4 class="text-center">Articles</h4>
+      <%= render 'articles/table' %>      
+    </div>
+  </div>
+  </div>
