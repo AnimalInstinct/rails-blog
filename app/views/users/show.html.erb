@@ -1,11 +1,14 @@
 <div class="container">
   <div class="card">
     <div class="card-header">
-      <h1 class="text-center">Hello <%= @user.username %> !!1111</h1>
+      <h1 class="text-center"><%= @user.username %> profile</h1>
     </div>
     <div class="card-body p-5">
       <%= gravatar_for @user, size: 200 %>
-      <h4 class="text-center">Articles</h4>
+      <div class="text-center">
+        <%= link_to 'Edit User', edit_user_path(@user), class: "btn btn-success mt-4" %>
+      </div>
+      <h4 class="mt-4">Articles: </h4>
       <%= render 'articles/table' %>      
     </div>
   </div>
