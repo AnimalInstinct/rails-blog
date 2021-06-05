@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
   end
   def create
     @article = Article.new(article_params)
-    @article.user = User.first
+    @article.user = User.find(session[:user_id])
     if @article.save
       # render plain: @article.inspect
       flash[:success] = "Article successfully created"
