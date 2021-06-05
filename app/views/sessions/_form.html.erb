@@ -1,0 +1,15 @@
+<%= render 'shared/errors', obj: @session %>
+
+<%= form_with(scope: :session, url: login_path) do |f| %>
+    <div class="form-group mt-4">
+      <%= f.label :email, class: "form-label" %>
+      <%= f.email_field :email, class: "form-control" %>
+    </div>
+    <div class="form-group mt-4">
+      <%= f.label :password, class: "form-label" %>
+      <%= f.password_field :password, class: "form-control" %>
+    </div>
+    <div class="form-group btn-group mt-4">
+    <%= f.submit("Log in", class: "btn btn-outline-primary btn-large") %>
+    </div>
+<% end %>
