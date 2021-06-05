@@ -14,16 +14,16 @@
         </li>
         <li class="nav-item">
           <%= link_to 'About', about_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Sign up', signup_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Log in', login_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Log out', logout_path, class: "nav-link", method: :delete %>
-        </li>
+        </li>        
+        <% if logged_in? %>
+          <li class="nav-item align-self-end d-flex flex-row">
+              <%= link_to gravatar_for(current_user, size: 25), user_path(current_user), class: "me-3 nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to 'Log in', login_path, class: "nav-link" %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
