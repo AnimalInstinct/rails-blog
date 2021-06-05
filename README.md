@@ -13,6 +13,7 @@
 
 ## Links
 
-- [WakaTime project report](https://wakatime.com/projects/blog)
+- [WakaTime project report](https://wakatime.com/@AnimalInstinct/projects/jauhcwwvqu?start=2021-05-30&end=2021-06-05)
 - [Production server](https://bmdonego.herokuapp.com/).
 
+Ы
