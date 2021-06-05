@@ -4,7 +4,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
           <%= link_to 'Articles', articles_path, class: "nav-link" %>
@@ -14,17 +14,22 @@
         </li>
         <li class="nav-item">
           <%= link_to 'About', about_path, class: "nav-link" %>
-        </li>        
+        </li>  
+      </ul>
+
+        <ul class="navbar-nav">
         <% if logged_in? %>
           <li class="nav-item align-self-end d-flex flex-row">
-              <%= link_to gravatar_for(current_user, size: 25), user_path(current_user), class: "me-3 nav-link" %>
+              <%= link_to gravatar_for(current_user, size: 25), user_path(current_user), class: "nav-link" %>
+              <%= link_to current_user.username, user_path(current_user), class: "nav-link" %>
+              <%= link_to 'Log out', logout_path, class: "nav-link", method: :delete %>
           </li>
         <% else %>
           <li class="nav-item">
             <%= link_to 'Log in', login_path, class: "nav-link" %>
           </li>
         <% end %>
-      </ul>
+        </ul>   
     </div>
   </div>
 </nav>
