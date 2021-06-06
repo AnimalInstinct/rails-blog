@@ -1,0 +1,23 @@
+.homepage {
+  width: 100%;
+  height: 100vh;
+  & .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 350px;
+    background-image: url('blog.jpg');
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+    & .header {
+      font-size: 2em;
+      color: white;
+      & .btn {
+        margin-top: 2em;
+      }
+    }
+  }
+}
+

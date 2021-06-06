@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
     <%= render 'layouts/partials/header' %>
     <%= render 'layouts/partials/messages' %>
-    <main class="container mt-5 mb-5">
-     <%= yield %>
-    </main>
+    <%= yield %>
     <%= render 'layouts/partials/footer' %>
   </div>
 </html>
