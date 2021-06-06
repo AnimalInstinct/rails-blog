@@ -1,9 +1,5 @@
-<h1 class="lead">Articles list</h1>
-
-<p>
-  <%= link_to 'Create new article', new_article_path, class: "btn btn-outline-primary" %>
-</p>
-
-<%= render 'table' %>
-
-<%= will_paginate @article %>
+<div class="articles container mt-3">
+  <%= render 'become_author' %>
+  <%= render 'feed' %>
+  <%= will_paginate @article %>
+</div>

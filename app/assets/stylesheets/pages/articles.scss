@@ -1,0 +1,5 @@
+@import '../components/banner';
+
+.banner {
+  @include banner('zombie-writing.jpg', 2em, #FFFFFF)
+}

@@ -1,0 +1,30 @@
+@mixin banner($image, $fontsize, $textcolor) {
+  min-height: 200px;
+  background-image: url($image);
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+  @include element('body') {
+    color: $textcolor;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    @include element('title') {
+      font-size: $fontsize;
+      color: $textcolor;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@mixin element($element) {
+    &__#{$element} {
+        @content;
+    }
+}
