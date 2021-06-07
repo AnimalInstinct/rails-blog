@@ -7,9 +7,10 @@
       <%= gravatar_for @user, size: 200 %>
       <div class="text-center">
         <div class="btn-group mt-4">
-          <%= link_to 'Edit User', edit_user_path(@user), class: "btn btn-outline-success" %>
+          <%= link_to 'Edit User', edit_user_path(current_user), class: "btn btn-outline-success" %>
           <%= link_to 'New article', new_article_path, class: "btn btn-outline-success" %>
           <%= link_to 'Log out', logout_path, class: "btn btn-outline-success", method: :delete %>
+          <%= link_to 'Delete profile', user_path(current_user), class: "btn btn-outline-danger", method: :delete, data: { confirm: "Are you sure?" } %>
         </div>
       </div>
       <h4 class="mt-4">Articles: </h4>
