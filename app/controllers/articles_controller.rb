@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
       flash[:success] = 'Article was successfully deleted.'
       redirect_to articles_url
     else
-      flash[:error] = 'Something went wrong'
+      flash[:danger] = 'Something went wrong'
       redirect_to articles_url
     end
   end
