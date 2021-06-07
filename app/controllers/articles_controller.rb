@@ -14,7 +14,6 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.user = current_user
     if @article.save
-      # render plain: @article.inspect
       flash[:success] = "Article successfully created"
       redirect_to @article
     else
@@ -44,17 +43,14 @@ class ArticlesController < ApplicationController
   end
 
   private
-
   def set_article
     @article = Article.find(params[:id])
   end
-
   def article_params
     params.require(:article).permit(:title, :description)
   end
-
   def require_same_user
-    if current_user != @article.user
+    if current_user != @article.user && !current_user.admin?
       flash[:alert] = ' You can edit or delete only your articles.'
       redirect_to @article
     end
