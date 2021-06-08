@@ -9,12 +9,14 @@
 
 - [Deployed at Heroku](https://bmdonego.herokuapp.com/).
 - Sqlite for the development environment and Postgresql for the production.
-- Custom authentication and authorization system with only bcrypt depends on.
+- Simple authentication and authorization system with only bcrypt depends on.
 
 ## Links
 
 - [WakaTime project report](https://wakatime.com/@AnimalInstinct/projects/jauhcwwvqu?start=2021-05-30&end=2021-06-05)
 - [Production server](https://bmdonego.herokuapp.com/).
+
+## Tests
 
 ## To Do
 - Users add super_admin and moderator
