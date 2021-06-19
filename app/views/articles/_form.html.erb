@@ -1,16 +1,15 @@
 <%= render 'shared/errors', obj: @article %>
-
 <%= form_with(model: @article, local: true) do |f| %>
-  <div class="form-group">
-    <%= f.label :title, class: "form-label" %> 
-    <%= f.text_field :title, class: "form-control" %>
-  </div>
-  <div class="form-group mt-4">
-    <%= f.label :description, class: "form-label" %>
-    <%= f.text_area :description, class: "form-control" %>
-  </div>
-  <div class="form-group btn-group mt-4">
-    <%= f.submit class: "btn btn-outline-primary btn-large" %>
-    <%= link_to 'Cancel', articles_path, class: "btn btn-outline-danger btn-large" %>
-  </div>
+<div class="form-group">
+  <%= f.label :title, class: "form-label" %>
+  <%= f.text_field :title, class: "form-control" %>
+</div>
+<div class="form-group mt-4">
+  <%= f.label :description, class: "form-label" %>
+  <%= f.text_area :description, class: "form-control" %>
+</div>
+<div class="form-group btn-group mt-4">
+  <%= f.submit class: "btn btn-outline-primary btn-large" %>
+  <%= link_to 'Cancel', articles_path, class: "btn btn-outline-danger btn-large" %>
+</div>
 <% end %>

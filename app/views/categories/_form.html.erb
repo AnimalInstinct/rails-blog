@@ -1,17 +1,16 @@
-<%= form_with(model: category) do |form| %>
-  <% if category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+<%= render 'shared/errors', obj: @category %>
 
-      <ul>
-        <% category.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= form.submit %>
+<%= form_with(model: @category, local: true) do |f| %>
+  <div class="form-group">
+    <%= f.label :name, class: "form-label" %> 
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group mt-4">
+    <%= f.label :description, class: "form-label" %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+  <div class="form-group btn-group mt-4">
+    <%= f.submit class: "btn btn-outline-primary btn-large" %>
+    <%= link_to 'Cancel', categories_path, class: "btn btn-outline-danger btn-large" %>
   </div>
 <% end %>
