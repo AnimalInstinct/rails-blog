@@ -10,7 +10,7 @@
 # Cop supports --auto-correct.
 Layout/EmptyLines:
   Exclude:
-    - 'lib/generators/templates/install/admin_panel/users/admin_users_controller.rb'
+    - "lib/generators/templates/install/admin_panel/users/admin_users_controller.rb"
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -18,7 +18,7 @@ Layout/EmptyLines:
 # SupportedStylesAlignWith: keyword, variable, start_of_line
 Layout/EndAlignment:
   Exclude:
-    - 'lib/generators/templates/install/install_devise/ability.rb'
+    - "lib/generators/templates/install/install_devise/ability.rb"
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -26,15 +26,15 @@ Layout/EndAlignment:
 # SupportedStyles: normal, rails
 Layout/IndentationConsistency:
   Exclude:
-    - 'lib/adminos/controllers/resource.rb'
+    - "lib/adminos/controllers/resource.rb"
 
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: Width, IgnoredPatterns.
 Layout/IndentationWidth:
   Exclude:
-    - 'lib/adminos/controllers/resource.rb'
-    - 'lib/generators/templates/install/install_devise/ability.rb'
+    - "lib/adminos/controllers/resource.rb"
+    - "lib/generators/templates/install/install_devise/ability.rb"
 
 # Offense count: 2
 # Cop supports --auto-correct.
@@ -42,17 +42,17 @@ Layout/IndentationWidth:
 # SupportedStyles: space, no_space
 Layout/SpaceInsideParens:
   Exclude:
-    - 'lib/generators/templates/install/routes/pages.rb'
+    - "lib/generators/templates/install/routes/pages.rb"
 
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: AllowInHeredoc.
 Layout/TrailingWhitespace:
   Exclude:
-    - 'lib/generators/templates/install/install_devise/user.rb'
+    - "lib/generators/templates/install/install_devise/user.rb"
 
 # Offense count: 217
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
-Metrics/LineLength:
+Layout/LineLength:
   Max: 249
