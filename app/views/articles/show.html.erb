@@ -12,6 +12,9 @@
   <% if @article.user %>
   <%= render 'about_author' %>
   <% end %>
+  <% if @article.categories.any? %>
+  <%= render @article.categories %>
+  <% end %>
   <div class="my-4">
     <%= @article.description %>
   </div>
