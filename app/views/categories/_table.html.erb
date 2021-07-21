@@ -5,6 +5,7 @@
       <th>Description</th>
       <th>Created</th>
       <th>Updated</th>
+      <th>Articles</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -15,6 +16,7 @@
       <td><%= truncate(category.description, :length => 100) %></td>
       <td><%= time_ago_in_words(category.created_at) %> ago</td>
       <td><%= time_ago_in_words(category.updated_at) %> ago</td>
+      <td><%= pluralize(category.articles.count, "article") %></td>
       <td>
         <div class="btn-group"><%= link_to 'Show', category_path(category), class: "btn btn-outline-success" %>
           <%= link_to 'Edit', edit_category_path(category), method: :get, class: "btn btn-outline-primary" %>

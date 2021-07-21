@@ -25,6 +25,7 @@ class ArticlesController < ApplicationController
   end
   def update
     if @article.update(article_params)
+      @article.user = User.find(article_params['user_id'])
       flash[:success] = "Article was successfully updated"
       redirect_to @article
     else
@@ -47,7 +48,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
   def article_params
-    params.require(:article).permit(:title, :description, category_ids: [])
+    params.require(:article).permit(:user_id, :title, :description, category_ids: [])
   end
   def require_same_user
     if current_user != @article.user && !current_user.admin?
